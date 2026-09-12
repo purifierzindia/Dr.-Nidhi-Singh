@@ -42,9 +42,9 @@ export const AboutSection: React.FC = () => {
                     Verified Qualifications
                   </span>
                 </div>
-                <div className="text-sm font-serif font-bold text-[#0F1E36]">MBBS</div>
-                <div className="text-sm font-serif font-bold text-[#0F1E36]">MS – Obstetrics & Gynaecology</div>
-                <div className="text-[11px] text-slate-500 mt-1">Medical Specialist Certification</div>
+                <div className="text-sm font-serif font-bold text-[#0F1E36]">MBBS, MS (Obs & Gynae)</div>
+                <div className="text-sm font-serif font-bold text-[#0F1E36]">FMAS (Laparoscopic Surgery)</div>
+                <div className="text-[11px] text-slate-500 mt-1">Specialist in High-Risk Pregnancy & Laparoscopy</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white border border-[#EAE3D9] shadow-2xs">

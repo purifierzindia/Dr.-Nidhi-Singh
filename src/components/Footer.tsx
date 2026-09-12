@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, MessageSquare, ShieldCheck, Heart, Instagram } from 'lucide-react';
+import { MapPin, Phone, MessageSquare, ShieldCheck, Heart, Instagram, Mail } from 'lucide-react';
 import { DOCTOR_PROFILE, CONSULTATION_LOCATIONS } from '../data/doctorData';
 
 export const Footer: React.FC = () => {
@@ -29,15 +29,23 @@ export const Footer: React.FC = () => {
               {DOCTOR_PROFILE.roleTitle}
             </div>
             <p className="text-xs text-slate-300 font-medium">
-              MBBS, MS – Obstetrics & Gynaecology • 11+ Years Experience
+              MBBS, MS (Obs & Gynae), FMAS • 11+ Years Experience
             </p>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm pt-1">
-              Providing personalized women’s healthcare, pregnancy guidance, high-risk obstetric monitoring, and empathetic gynecological care in Dwarka, New Delhi.
+              Providing personalized women’s healthcare, pregnancy guidance, high-risk obstetric monitoring, IVF guidance, and laparoscopic care in Dwarka, New Delhi.
             </p>
 
-            <div className="pt-2 flex items-center gap-2 text-xs text-slate-300">
-              <MapPin className="w-3.5 h-3.5 text-[#D4A396]" />
-              <span>Dwarka, New Delhi (Sector 8, Sector 6, Sector 10)</span>
+            <div className="pt-2 space-y-1 text-xs text-slate-300">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#D4A396] shrink-0" />
+                <span>Dwarka, New Delhi (Sector 8, Sector 6, Sector 10)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-[#D4A396] shrink-0" />
+                <a href={`mailto:${DOCTOR_PROFILE.email}`} className="text-[#D4A396] hover:underline">
+                  {DOCTOR_PROFILE.email}
+                </a>
+              </div>
             </div>
           </div>
 
@@ -74,22 +82,44 @@ export const Footer: React.FC = () => {
           {/* Col 3: Direct Consultation Contacts */}
           <div className="md:col-span-4 space-y-3">
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-              Consultation Contacts
+              Direct Clinic Contacts
             </h4>
-            <div className="space-y-2 text-xs text-slate-300">
-              <div className="p-3 rounded-xl bg-[#16253E] border border-[#24334A]">
-                <div className="font-semibold text-white">Femme Med Hospital</div>
-                <div className="text-[11px] text-slate-400">Sector 8 Dwarka (Primary OPD & 24/7 Maternity)</div>
-                <a href="tel:+919266285111" className="text-[#D4A396] hover:underline block mt-1">
-                  +91 92662 85111
-                </a>
+            <div className="space-y-2.5 text-xs text-slate-300">
+              <div className="p-3 rounded-xl bg-[#16253E] border border-[#24334A] space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-white">Femme Med Hospital</span>
+                  <span className="text-[10px] text-emerald-400 font-medium bg-emerald-950/60 px-2 py-0.5 rounded-sm">24/7 Maternity</span>
+                </div>
+                <div className="text-[11px] text-slate-400">Sector 8 Dwarka (Primary OPD)</div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-0.5">
+                  <a href={`tel:${DOCTOR_PROFILE.phonePrimary}`} className="text-[#D4A396] hover:underline font-medium inline-flex items-center gap-1">
+                    <Phone className="w-3 h-3" />
+                    <span>Call: {DOCTOR_PROFILE.phoneDisplay}</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/${DOCTOR_PROFILE.whatsappNumber}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:underline font-medium inline-flex items-center gap-1"
+                  >
+                    <MessageSquare className="w-3 h-3" />
+                    <span>WhatsApp: {DOCTOR_PROFILE.whatsappDisplay}</span>
+                  </a>
+                </div>
+                <div className="pt-0.5 text-[11px]">
+                  <a href={`mailto:${DOCTOR_PROFILE.email}`} className="text-slate-300 hover:text-white inline-flex items-center gap-1">
+                    <Mail className="w-3 h-3 text-[#D4A396]" />
+                    <span>{DOCTOR_PROFILE.email}</span>
+                  </a>
+                </div>
               </div>
 
               <div className="p-3 rounded-xl bg-[#16253E] border border-[#24334A]">
                 <div className="font-semibold text-white">Aj Gynae & Healthcare Centre</div>
-                <div className="text-[11px] text-slate-400">Sector 6 Dwarka (Evening OPD)</div>
-                <a href="tel:+919205481438" className="text-[#D4A396] hover:underline block mt-1">
-                  +91 92054 81438
+                <div className="text-[11px] text-slate-400">Sector 6 Dwarka (Evening OPD up to 9 PM)</div>
+                <a href="tel:+919205481438" className="text-[#D4A396] hover:underline block mt-1 font-medium inline-flex items-center gap-1">
+                  <Phone className="w-3 h-3" />
+                  <span>+91 92054 81438</span>
                 </a>
               </div>
             </div>

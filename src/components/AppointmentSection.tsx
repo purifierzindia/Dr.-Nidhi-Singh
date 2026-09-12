@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Phone, MessageSquare, Clock, MapPin, CheckCircle2, AlertCircle, Sparkles } from 'lucide-react';
+import { Calendar, Phone, MessageSquare, Clock, MapPin, CheckCircle2, AlertCircle, Sparkles, Mail } from 'lucide-react';
 import { DOCTOR_PROFILE, CONSULTATION_LOCATIONS, AREAS_OF_EXPERTISE } from '../data/doctorData';
 import { AppointmentFormState } from '../types';
 
@@ -77,7 +77,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
               className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium text-[#0F1E36] bg-[#FAF8F5] border border-[#D5CEC5] hover:border-[#0F1E36] rounded-full transition shadow-2xs"
             >
               <Phone className="w-3.5 h-3.5 text-[#B87D70]" />
-              <span>Call Clinic: {DOCTOR_PROFILE.phoneDisplay}</span>
+              <span>Call: {DOCTOR_PROFILE.phoneDisplay}</span>
             </a>
 
             <a
@@ -89,7 +89,15 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
               className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium text-[#2E4A35] bg-[#E2E8E0] hover:bg-[#d5ded2] border border-[#8F9D88]/40 rounded-full transition shadow-2xs"
             >
               <MessageSquare className="w-3.5 h-3.5 text-[#4A5745]" />
-              <span>Direct WhatsApp Chat</span>
+              <span>WhatsApp: {DOCTOR_PROFILE.whatsappDisplay}</span>
+            </a>
+
+            <a
+              href={`mailto:${DOCTOR_PROFILE.email}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium text-slate-700 bg-[#FAF8F5] border border-[#D5CEC5] hover:border-[#0F1E36] rounded-full transition shadow-2xs"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#B87D70]" />
+              <span>{DOCTOR_PROFILE.email}</span>
             </a>
           </div>
         </div>

@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 {DOCTOR_PROFILE.name}
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-1 font-medium">
-                MBBS, MS – Obstetrics & Gynaecology • 11+ Years Overall (6+ Years Specialist)
+                MBBS, MS (Obs & Gynae), FMAS • 11+ Years Overall (6+ Years Specialist)
               </p>
             </div>
 

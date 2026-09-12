@@ -1,6 +1,6 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Navigation, CheckCircle2, ArrowUpRight } from 'lucide-react';
-import { CONSULTATION_LOCATIONS } from '../data/doctorData';
+import { MapPin, Phone, Clock, Navigation, CheckCircle2, ArrowUpRight, Mail, MessageSquare } from 'lucide-react';
+import { CONSULTATION_LOCATIONS, DOCTOR_PROFILE } from '../data/doctorData';
 import { ConsultationLocation } from '../types';
 
 interface LocationsSectionProps {
@@ -111,6 +111,14 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onSelectLoca
                             </span>
                           )}
                         </div>
+                        {loc.email && (
+                          <div className="mt-1 flex items-center gap-1.5 text-[11px] text-slate-600">
+                            <Mail className="w-3 h-3 text-[#B87D70] shrink-0" />
+                            <a href={`mailto:${loc.email}`} className="hover:underline text-slate-700 font-medium">
+                              {loc.email}
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -162,10 +170,10 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onSelectLoca
             <strong className="font-semibold text-[#8A4B42]">Maternity Emergency Support:</strong> For urgent obstetric concerns or active labor, Femme Med Hospital (Sector 8 Dwarka) provides 24-hour medical access.
           </div>
           <a
-            href="tel:+919266285111"
+            href={`tel:${DOCTOR_PROFILE.phonePrimary}`}
             className="px-3.5 py-1.5 bg-[#0F1E36] text-white rounded-lg text-xs font-medium hover:bg-[#1E293B] shrink-0"
           >
-            Emergency Call: +91 92662 85111
+            Emergency Call: {DOCTOR_PROFILE.phoneDisplay}
           </a>
         </div>
 

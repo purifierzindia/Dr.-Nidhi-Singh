@@ -13,6 +13,7 @@ export interface ConsultationLocation {
   mapQuery: string;
   features: string[];
   imageUrl?: string;
+  email?: string;
 }
 
 export interface ExpertiseItem {

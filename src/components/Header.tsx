@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Calendar, Phone, MapPin, Instagram } from 'lucide-react';
+import { Menu, X, Calendar, Phone, MapPin, Instagram, Mail, MessageSquare } from 'lucide-react';
 import { DOCTOR_PROFILE } from '../data/doctorData';
 
 interface HeaderProps {
@@ -169,7 +169,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 className="py-2.5 px-3 text-center text-xs font-medium text-[#0F1E36] bg-white border border-[#D5CEC5] rounded-xl flex items-center justify-center gap-1.5"
               >
                 <Phone className="w-3.5 h-3.5 text-[#B87D70]" />
-                <span>Call Clinic</span>
+                <span>Call ({DOCTOR_PROFILE.phoneDisplay})</span>
               </a>
               <a
                 href={`https://wa.me/${DOCTOR_PROFILE.whatsappNumber}?text=${encodeURIComponent(
@@ -177,11 +177,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2.5 px-3 text-center text-xs font-medium text-[#0F1E36] bg-[#E2E8E0] border border-[#8F9D88]/30 rounded-xl flex items-center justify-center gap-1.5"
+                className="py-2.5 px-3 text-center text-xs font-medium text-[#2E4A35] bg-[#E2E8E0] border border-[#8F9D88]/40 rounded-xl flex items-center justify-center gap-1.5"
               >
+                <MessageSquare className="w-3.5 h-3.5 text-[#4A5745]" />
                 <span>WhatsApp</span>
               </a>
             </div>
+
+            <a
+              href={`mailto:${DOCTOR_PROFILE.email}`}
+              className="w-full py-2 px-3 text-center text-xs font-medium text-slate-700 bg-white border border-[#D5CEC5] rounded-xl flex items-center justify-center gap-2"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#B87D70]" />
+              <span>{DOCTOR_PROFILE.email}</span>
+            </a>
 
             <a
               href={DOCTOR_PROFILE.instagramUrl}

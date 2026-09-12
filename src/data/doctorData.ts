@@ -7,6 +7,7 @@ export const DOCTOR_PROFILE = {
   qualifications: [
     { degree: 'MBBS', institution: 'Verified Medical Degree' },
     { degree: 'MS - Obstetrics & Gynaecology', institution: 'Post Graduate Specialization' },
+    { degree: 'FMAS', institution: 'Fellowship in Minimal Access Surgery (Laparoscopy)' },
   ],
   experience: {
     overallYears: 11,
@@ -20,11 +21,12 @@ export const DOCTOR_PROFILE = {
   instagramUrl: 'https://www.instagram.com/drgynaesingh?stkn=MWdqcWxpa2MwcmdsdQ==',
   instagramHandle: '@drgynaesingh',
   instagramDisplayText: 'Follow @drgynaesingh on Instagram',
-  phonePrimary: '+919266285111',
-  phoneDisplay: '+91 92662 85111',
+  phonePrimary: '+919266283222',
+  phoneDisplay: '+91 92662 83222',
   phoneAlternative: '+91 92054 81438',
-  whatsappNumber: '919266285111',
-  whatsappDisplay: '+91 92662 85111',
+  whatsappNumber: '919266283444',
+  whatsappDisplay: '+91 92662 83444',
+  email: 'femmemaxhospital@gmail.com',
   rating: {
     score: 4.9,
     source: 'Verified Patient Recommendations',
@@ -34,7 +36,7 @@ export const DOCTOR_PROFILE = {
   subheadline: 'Compassionate gynecological and obstetric care in Dwarka, with a patient-focused approach.',
   aboutHeading: 'Experienced Care. Personal Attention.',
   aboutPhilosophy:
-    'Dr. Nidhi Singh brings over a decade of medical experience and specialized expertise in obstetrics and gynecology. Known for her patient, soft-spoken demeanor, she prioritizes unhurried consultations where women feel heard, supported, and actively informed about every stage of their health and pregnancy.',
+    'Dr. Nidhi Singh brings over a decade of medical experience and specialized expertise in obstetrics, gynecology, and laparoscopic care. A safe, non-judgmental healthcare space where women feel heard, supported, and actively informed about every stage of their health and pregnancy.',
 };
 
 export const CONSULTATION_LOCATIONS: ConsultationLocation[] = [
@@ -47,9 +49,10 @@ export const CONSULTATION_LOCATIONS: ConsultationLocation[] = [
     sector: 'Sector 8',
     city: 'New Delhi – 110077',
     timings: 'Mon – Sat: Morning & Afternoon OPD (24/7 Emergency Maternity Care)',
-    phone: '+919266285111',
-    phoneDisplay: '+91 92662 85111',
-    secondaryPhone: '+91 97252 80442',
+    phone: '+919266283222',
+    phoneDisplay: '+91 92662 83222',
+    secondaryPhone: '+91 92662 83444',
+    email: 'femmemaxhospital@gmail.com',
     mapQuery: 'Femme Med Hospital Plot 4 Block A Sector 8 Dwarka New Delhi',
     features: ['Dedicated Maternity Wing', 'High-Risk Pregnancy Unit', 'Laparoscopy & Daycare', 'Emergency OB-GYN Access'],
     imageUrl: '/assets/femme_med_hero.jpg',
@@ -228,7 +231,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'faq-1',
     question: 'How can I book an appointment?',
     answer:
-      'You can request a consultation using the online booking form on this page, call the clinic directly at +91 92662 85111, or message via WhatsApp. Our clinic coordinator will confirm your preferred timing and location.',
+      'You can request a consultation using the online booking form on this page, call the clinic directly at 092662 83222 (+91 92662 83222), or message via WhatsApp (+91 92662 83444). Our clinic coordinator will confirm your preferred timing and location.',
   },
   {
     id: 'faq-2',
@@ -252,6 +255,6 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'faq-5',
     question: 'How can I contact the clinic?',
     answer:
-      'You can call directly on +91 92662 85111 or +91 92054 81438, send a message through WhatsApp, or visit Femme Med Hospital at Plot-4, Block A, Sector 8 Dwarka. For emergency pregnancy care, Femme Med Hospital operates 24 hours a day.',
+      'You can call directly on 092662 83222 / +91 92662 83222, send a WhatsApp message to +91 92662 83444, or email femmemaxhospital@gmail.com. You can also visit Femme Med Hospital at Plot-4, Block A, Sector 8 Dwarka (24/7 maternity access).',
   },
 ];
