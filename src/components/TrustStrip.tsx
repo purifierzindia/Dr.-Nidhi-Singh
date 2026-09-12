@@ -21,9 +21,9 @@ export const TrustStrip: React.FC = () => {
           {/* Stat 2: Verified Qualifications */}
           <div className="pt-4 md:pt-0 md:px-6 text-center sm:text-left flex flex-col items-center sm:items-start">
             <div className="flex items-center gap-1.5">
-              <span className="text-xl sm:text-2xl font-serif font-bold text-[#0F1E36]">MBBS, MS</span>
+              <span className="text-xl sm:text-2xl font-serif font-bold text-[#0F1E36]">MBBS, MS, FMAS</span>
             </div>
-            <div className="text-xs font-semibold text-[#0F1E36] mt-0.5">Obstetrics & Gynaecology</div>
+            <div className="text-xs font-semibold text-[#0F1E36] mt-0.5">Obs & Gynae • Laparoscopy</div>
             <div className="text-[11px] text-slate-500 flex items-center gap-1">
               <ShieldCheck className="w-3 h-3 text-[#5E6D58]" />
               <span>Verified Medical Degrees</span>

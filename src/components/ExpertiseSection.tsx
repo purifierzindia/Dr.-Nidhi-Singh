@@ -68,15 +68,15 @@ export const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ onSelectServ
           </div>
         </div>
 
-        {/* Clean Editorial Grid — NOT giant cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Clean Editorial Grid — Lightweight visual treatment without heavy shadows/borders */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className="group p-6 rounded-xl bg-[#FAF8F5] border border-[#EAE3D9] hover:border-[#B87D70]/60 hover:bg-white transition-all duration-300 flex flex-col justify-between text-left relative"
+              className="group p-4 sm:p-5 rounded-xl bg-white border border-[#EAE3D9]/80 hover:border-[#B87D70]/60 transition-colors flex flex-col justify-between text-left"
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-2.5">
                   <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-400">
                     0{index + 1}
                   </span>
@@ -91,16 +91,16 @@ export const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ onSelectServ
                   </span>
                 </div>
 
-                <h3 className="text-lg font-serif font-semibold text-[#0F1E36] mb-2 group-hover:text-[#8A4B42] transition-colors">
+                <h3 className="text-base sm:text-lg font-serif font-semibold text-[#0F1E36] mb-1.5 group-hover:text-[#8A4B42] transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                <p className="text-xs text-slate-600 leading-relaxed mb-3">
                   {item.summary}
                 </p>
 
                 {/* Sub-points */}
-                <ul className="space-y-1.5 mb-4">
+                <ul className="space-y-1 mb-3">
                   {item.highlights.map((point, pIdx) => (
                     <li key={pIdx} className="text-[11px] text-slate-500 flex items-start gap-1.5">
                       <Check className="w-3 h-3 text-[#5E6D58] shrink-0 mt-0.5" />
@@ -113,7 +113,7 @@ export const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ onSelectServ
               {/* Consultation trigger link */}
               <button
                 onClick={() => onSelectService(item.title)}
-                className="mt-2 text-xs font-medium text-[#0F1E36] group-hover:text-[#8A4B42] flex items-center gap-1 pt-3 border-t border-[#EAE3D9]/60 cursor-pointer"
+                className="text-xs font-medium text-[#0F1E36] group-hover:text-[#8A4B42] flex items-center gap-1 pt-2.5 border-t border-[#EAE3D9]/60 cursor-pointer"
               >
                 <span>Consult on this area</span>
                 <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -122,12 +122,12 @@ export const ExpertiseSection: React.FC<ExpertiseSectionProps> = ({ onSelectServ
           ))}
         </div>
 
-        {/* Reassurance note on verified clinical scope */}
-        <div className="mt-8 p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE3D9] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600 text-left">
+        {/* Clean editorial footnote with subtle divider — NOT a boxed card */}
+        <div className="mt-8 pt-4 border-t border-[#EAE3D9] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-500 text-left">
           <p>
-            <strong className="text-[#0F1E36]">Medical Integrity:</strong> Dr. Nidhi Singh focuses on evidence-based, compassionate care. Consultations are structured around patient history and clinical necessity.
+            <strong className="text-[#0F1E36] font-medium">Medical Integrity:</strong> Consultations are structured around individualized clinical history, evidence-based guidelines, and patient dialogue.
           </p>
-          <span className="text-[11px] text-[#735A52] shrink-0">Dwarka Practice Locations</span>
+          <span className="text-[11px] text-[#735A52] shrink-0">Dwarka Sector 8, Sector 6, Sector 10</span>
         </div>
 
       </div>

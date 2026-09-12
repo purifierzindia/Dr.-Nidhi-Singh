@@ -49,40 +49,36 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* Editorial Hero */}
+        {/* 1. Editorial Hero with Doctor Photograph */}
         <Hero onOpenBooking={handleOpenBooking} />
 
-        {/* Minimal Verified Trust Strip */}
+        {/* 2. Minimal Verified Trust Strip */}
         <TrustStrip />
 
-        {/* About Dr. Nidhi Singh */}
+        {/* 3. Editorial About Dr. Nidhi Singh */}
         <AboutSection />
 
-        {/* Areas of Expertise */}
+        {/* 4. Clinical Expertise */}
         <ExpertiseSection onSelectService={handleSelectService} />
 
-        {/* Dedicated Pregnancy Care Feature */}
-        <PregnancyCareFeature onOpenBooking={handleOpenBooking} />
-
-        {/* Patient Experience: Care That Begins With Listening */}
-        <PatientExperienceSection />
-
-        {/* Why Patients Choose the Practice */}
-        <WhyChooseSection />
-
-        {/* Verified Patient Reviews */}
-        <ReviewsSection />
-
-        {/* Consultation Locations in Dwarka (Femme Med Hospital, Sector 6, Sector 10) */}
+        {/* 5. One Strong Clinic/Hospital Visual & Practice Centers */}
         <LocationsSection onSelectLocationForBooking={handleSelectLocation} />
 
-        {/* Final Conversion CTA & Appointment Form */}
+        {/* 6. Patient Care (Experience & Personalized Pregnancy Journey) */}
+        <PatientExperienceSection />
+        <PregnancyCareFeature onOpenBooking={handleOpenBooking} />
+
+        {/* 7. Practice Foundations & Verified Reviews */}
+        <WhyChooseSection />
+        <ReviewsSection />
+
+        {/* 8. Appointment Scheduling */}
         <AppointmentSection
           selectedLocationId={selectedLocationId}
           selectedServiceTitle={selectedService}
         />
 
-        {/* Clean FAQs Accordion */}
+        {/* 9. Frequently Asked Questions */}
         <FaqSection />
       </main>
 

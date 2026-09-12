@@ -201,14 +201,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
                     {/* Metric 2: Degree */}
                     <div className="p-2.5 rounded-xl bg-[#FAF8F5] border border-[#EAE3D9]">
-                      <div className="text-lg sm:text-xl font-serif font-bold text-[#0F1E36] leading-tight">
-                        MBBS, MS
+                      <div className="text-base sm:text-lg font-serif font-bold text-[#0F1E36] leading-tight">
+                        MBBS, MS, FMAS
                       </div>
                       <div className="text-[11px] text-slate-600 font-medium">
-                        Obs & Gynaecology
+                        Obs & Gynae • Laparoscopy
                       </div>
                       <div className="text-[10px] text-slate-500">
-                        Specialist Degree
+                        Verified Credentials
                       </div>
                     </div>
 
